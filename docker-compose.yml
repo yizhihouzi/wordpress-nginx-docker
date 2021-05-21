@@ -24,6 +24,7 @@ services:
       - ${NGINX_CONF_DIR:-./nginx}:/etc/nginx/conf.d
       - ${NGINX_LOG_DIR:-./logs/nginx}:/var/log/nginx
       - ${WORDPRESS_DATA_DIR:-./wordpress}:/var/www/html
+      - ./nginx/MP_verify_zkDj3CLvTrVeL25j.txt:/var/www/html/MP_verify_zkDj3CLvTrVeL25j.txt
       - ${SSL_CERTS_DIR:-./certs}:/data/letsencrypt
     depends_on:
       - wordpress
