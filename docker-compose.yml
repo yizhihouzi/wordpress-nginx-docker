@@ -25,7 +25,6 @@ services:
       - ${NGINX_LOG_DIR:-./logs/nginx}:/var/log/nginx
       - ${WORDPRESS_DATA_DIR:-./wordpress}:/var/www/html
       - ${SSL_CERTS_DIR:-./certs}:/data/letsencrypt
-      - ${SSL_CERTS_DATA_DIR:-./certs-data}:/data/letsencrypt
     depends_on:
       - wordpress
     restart: always
